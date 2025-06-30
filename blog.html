@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | Gabrielle McCrae</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body class="pixel-bg">
+  <canvas id="bg-canvas"></canvas>
+
+  <div class="terminal-container">
+    <header>
+      <h1>>_ Dev Log</h1>
+      <p><span id="blinking-text" data-text="My thoughts, ideas, and pixel musings."></span></p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <!-- Blog Posts -->
+      <section class="blog-entry">
+        <h2>📝 May, 2025 — SwiftRide <a href="https://github.com/GEM265/SwiftRide" target="_blank">github.com/GEM265/SwiftRide</a></h2>
+        <p>
+          You have been hired by a fictional ride-sharing company, "SwiftRide," to design a software system to manage their ride-sharing operations.
+        </p>
+      </section>
+
+      <section class="blog-entry">
+        <h2>📝 May, 2024 — DES Implementation <a href="https://github.com/GEM265/DES-implementation" target="_blank">github.com/GEM265/DES-Implementation</a></h2>
+        <p>
+          This is a symmetric-key algorithm for encrypting digital data. It was my first time working with cryptography, and I learned a lot about how data can be secured using algorithms. The project involved implementing the DES algorithm in Java, which was both challenging and rewarding.
+        </p>
+      </section>
+
+      <section class="blog-entry">
+        <h2>📝 August, 2024 — Introduce Student <a href="https://github.com/GEM265/IntroduceStudent" target="_blank">github.com/GEM265/IntroduceStudent</a></h2>
+        <p>
+          This app allows the user to introduce themselves by asking the user what their name is, what college/university they are going to, whether or not they want to have more pets and how many pets they have. This is my first time using Swift and I had a lot of fun making it.
+        </p>
+      </section>
+
+      <section class="blog-entry">
+        <h2>🧠 May 2024 — ElGamal <a href="https://github.com/GEM265/Elgamal" target="_blank">github.com/GEM265/Elgamal</a></h2>
+        <p>
+          I made an ElGamal encryption and decryption program using Java. I had a lot of fun making it. I learned how to use the pow function and how to use the random module to generate large prime numbers. I also learned how to use the math module to calculate the greatest common divisor (gcd) and how to use the sympy module to generate large prime numbers.
+        </p>
+      </section>
+
+      <section class="blog-entry">
+        <h2>💻 May 2024 — Website Projects <a href="https://github.com/GEM265/Website-Projects" target="_blank">github.com/GEM265/Website-Projects</a></h2>
+        <p>
+          These are all the projects I've made using HTML, CSS, and Bootstrap. Projects 3 and 4 are interactive, while Projects 1 and 2 are just a showcase of me using HTML and CSS.  
+          <br>• Project 1: Make a pseudo resume using HTML  
+          <br>• Project 2: Resume using HTML and CSS  
+          <br>• Project 3: Simple Statistical Analysis  
+          <br>• Project 4: Tic Tac Toe
+        </p>
+      </section>
+
+      <!-- 💬 Disqus Comment Thread (once only) -->
+      <div id="disqus_thread"></div>
+      <script>
+        var disqus_config = function () {
+          this.page.url = window.location.href;
+          this.page.identifier = "blog-global";
+        };
+
+        (function () {
+          var d = document, s = d.createElement('script');
+          s.src = 'https://porfolio-6.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Gabrielle McCrae. The blog lives on ✍️</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

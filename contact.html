@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Gabrielle McCrae</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body class="pixel-bg">
+  <canvas id="bg-canvas"></canvas>
+
+  <div class="terminal-container">
+    <header>
+      <h1>>_ Contact Me</h1>
+      <p><span id="blinking-text" data-text="Lets's connect - pixel by pixel!"></span></p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <!--<li><a href="testimonials.html">Testimonials</a></li>-->
+        <li><a href="certifications.html">Certifications</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section>
+        <h2>Send a Message</h2>
+        <form action="https://formspree.io/f/mdkzwyzk" method="POST" class="contact-form">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button type="submit" class="download-button">▶ Send Message</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Gabrielle McCrae. Don’t be shy, say hi 👾</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
