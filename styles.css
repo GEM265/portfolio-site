@@ -1,0 +1,271 @@
+/* Base pixel/terminal styles */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0d0d0d;
+  color: #00ffcc;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 12px;
+  overflow-x: hidden;
+}
+
+/* 🔮 Animated pixel background setup */
+body.pixel-bg, #bg-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: #0d0d0d;
+}
+
+/* Main content box */
+.terminal-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  border: 4px double #00ffcc;
+  box-shadow: 0 0 20px #00ffcc;
+  background-color: #000;
+  position: relative;
+  z-index: 1;
+}
+
+/* Headers */
+header h1 {
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.blinking {
+  color: #00ffcc;
+  margin-top: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.blinking::after {
+  content: '_'; /* or try '|', '█', etc. */
+  animation: blink 1s steps(1, start) infinite;
+  position: absolute;
+  right: -10px;
+  top: 0;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Navigation menu */
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ff66cc;
+  background: #111;
+  border: 2px solid #ff66cc;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  transition: all 0.2s ease-in-out;
+}
+
+nav ul li a:hover {
+  background: #ff66cc;
+  color: #000;
+  box-shadow: 0 0 8px #ff66cc;
+}
+
+/* Section headings */
+main h2 {
+  color: #ffffff;
+  border-bottom: 2px dotted #00ffcc;
+  padding-bottom: 0.5rem;
+  margin-top: 2rem;
+}
+
+/* Footer */
+footer {
+  margin-top: 4rem;
+  text-align: center;
+  color: #888;
+  font-size: 0.75rem;
+  border-top: 1px solid #222;
+  padding-top: 1rem;
+}
+
+.download-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #111;
+  color: #ff66cc;
+  border: 3px solid #ff66cc;
+  font-family: 'Press Start 2P', monospace;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 10px #ff66cc;
+}
+
+.download-button:hover {
+  background-color: #ff66cc;
+  color: #000;
+  box-shadow: 0 0 20px #ff66cc, 0 0 30px #ff66cc;
+  cursor: pointer;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  font-family: 'Press Start 2P', monospace;
+  padding: 0.75rem;
+  background: #000;
+  color: #00ffcc;
+  border: 2px solid #00ffcc;
+  font-size: 10px;
+  resize: none;
+  outline: none;
+}
+
+.contact-form label {
+  color: #ff66cc;
+  font-size: 10px;
+}
+
+.blog-entry {
+  border: 2px solid #ff66cc;
+  background-color: #111;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 10px #ff66cc;
+}
+
+.blog-entry h2 {
+  color: #00ffcc;
+  font-size: 12px;
+  margin-bottom: 0.5rem;
+}
+
+.blog-entry p {
+  font-size: 10px;
+  color: #fff;
+}
+
+#disqus_thread {
+  border-top: 2px dashed #ff66cc;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  font-family: 'Press Start 2P', monospace;
+  color: #ffffff;
+}
+
+/* Ensure scrolling works for tall pages */
+html, body {
+  height: auto;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  position: relative;
+}
+
+/* Keep canvas behind everything and non-interfering */
+#bg-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.cert-entry {
+  border: 2px solid #00ffcc;
+  background-color: #111;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 10px #00ffcc;
+}
+
+.cert-entry h2 {
+  color: #ff66cc;
+  font-size: 12px;
+  margin-bottom: 0.5rem;
+}
+
+.cert-entry p {
+  font-size: 10px;
+  color: #fff;
+}
+
+.cert-entry a {
+  color: #00ffff;
+  text-decoration: underline;
+}
+
+.avatar-pixel {
+  display: block;
+  width: 300px;
+  height: auto;
+  image-rendering: pixelated;
+  /* border: 3px solid #ff66cc; */
+  background-color: transparent;
+  margin: 1rem auto;
+}
+
+
+
+
+
+
+
+
+.project-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  background-color: #111;
+  border: 2px solid #00ffcc;
+  padding: 1.5rem;
+  box-shadow: 0 0 12px #00ffcc;
+  margin-top: 2rem;
+  font-family: 'Press Start 2P', monospace;
+}
+
+.project-thumbnail {
+  width: 100px;
+  height: 100px;
+  image-rendering: pixelated;
+  border: 2px solid #ff66cc;
+  box-shadow: 0 0 5px #ff66cc;
+}
+
+.project-info h3 {
+  color: #ff66cc;
+  font-size: 12px;
+  margin-bottom: 0.5rem;
+}
+
+.project-info p {
+  font-size: 10px;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
