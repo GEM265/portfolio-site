@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | Gabrielle McCrae</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body class="pixel-bg">
+  <canvas id="bg-canvas"></canvas>
+
+  <div class="terminal-container">
+    <header>
+      <h1>>_ Dev Log</h1>
+      <p><span id="blinking-text" data-text="My thoughts, ideas, and pixel musings."></span></p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <!-- Blog Posts -->
+      <section class="blog-entry">
+        <h2>📝 May, 2025 — SwiftRide</h2>
+        <p>
+          <a href="https://github.com/GEM265/SwiftRide" target="_blank">github.com/GEM265/SwiftRide</a> <br>
+        <br> A software system to manage ride-sharing operations. This project helped me implement OOP, class design, and booking logic.<br>
+        </p>
+      </section>
+
+      <section class="blog-entry">
+        <h2>📝 August, 2024 — Introduce Student</h2>
+        <p>
+          <a href="https://github.com/GEM265/IntroduceStudent" target="_blank">github.com/GEM265/IntroduceStudent</a><br>
+        <br> My first Swift app where users introduce themselves. Learned about UI prompts and state handling in Swift.
+        </p>
+      </section>
+
+      <section class="blog-entry">
+        <h2>📝 May, 2024 — DES Implementation</h2>
+        <p>
+          <a href="https://github.com/GEM265/DES-implementation" target="_blank">github.com/GEM265/DES-implementation</a><br>
+        <br> Implemented DES encryption in Java. Gained a deeper understanding of block ciphers and secure communication.
+        </p>
+      </section>
+
+      <section class="blog-entry">
+        <h2>🧠 May, 2024 — ElGamal</h2>
+        <p>
+          <a href="https://github.com/GEM265/Elgamal" target="_blank">github.com/GEM265/Elgamal</a><br>
+        <br> Built an ElGamal encryption and decryption system using Java. Introduced me to key generation and large prime number math.
+        </p>
+      </section>
+
+      <section class="blog-entry">
+        <h2>💻 May, 2024 — Website Projects</h2>
+        <p>
+          <a href="https://github.com/GEM265/Website-Projects" target="_blank">github.com/GEM265/Website-Projects</a><br>
+        <br> A collection of static and interactive websites I built with HTML, CSS, and Bootstrap.
+        </p>
+      </section>
+
+      <!-- 💬 Disqus Comment Thread (Global Comments) -->
+      <div id="disqus_thread" style="margin-top: 3rem;"></div>
+      <script>
+        var disqus_config = function () {
+          this.page.url = window.location.href;
+          this.page.identifier = "blog-global"; // Global blog comments
+        };
+
+        (function () {
+          var d = document, s = d.createElement('script');
+          s.src = 'https://portfolio-azwoy84pyj.disqus.com/embed.js'; // Replace with your Disqus shortname
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view comments powered by Disqus.</noscript>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Gabrielle McCrae. The blog lives on ✍️</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
